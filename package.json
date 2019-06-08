@@ -1,0 +1,19 @@
+{
+  "name": "devmachine-auth",
+  "version": "1.0.0",
+  "description": "Authorization service for a personal remote dev machine",
+  "main": "devmachine-auth.js",
+  "scripts": {
+    "start": "node devmachine-auth.js",
+    "start:dev": "nodemon devmachine-auth.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nishantdania",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

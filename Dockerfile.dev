@@ -1,0 +1,22 @@
+# Set base node version
+FROM node:12.4.0-alpine
+
+# Create and set working directory
+WORKDIR /src
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json and package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+RUN yarn
+
+# Copy source code
+# Commented so that we use the volumes in compose file for hot reloading
+# COPY . .
+
+# Expose a port
+EXPOSE 8080
+
+# Start the app in dev mode
+CMD ["yarn", "run", "start:dev"]
+
